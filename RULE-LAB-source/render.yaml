@@ -1,0 +1,12 @@
+# Render 免费部署配置（Blueprint）
+# 使用方法：GitHub 仓库 → render.com → New → Blueprint → 选择本仓库即可
+services:
+  - type: web
+    name: rule-lab
+    plan: free
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: PORT
+        value: 3000
